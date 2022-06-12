@@ -11,6 +11,10 @@ public class Main {
         displayHighScorePosition("shyam", res);
         res=calculateHighScorePosition(50);
         displayHighScorePosition("rangella", res);
+        Hello_World hell=new Hello_World();
+        System.out.println(hell.hello());
+        method_overloading mthd= new method_overloading();
+        System.out.println(mthd.calcFeetAndInchesToCentimeters(100));
     }
 
     public static void displayHighScorePosition(String name, int position){
