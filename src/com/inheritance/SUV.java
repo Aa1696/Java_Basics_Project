@@ -1,5 +1,6 @@
 package com.inheritance;
 
+
 public class SUV extends Cars{
     public String high_capacity_engine;
     public String all_wheel_drive;

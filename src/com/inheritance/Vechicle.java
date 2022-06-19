@@ -10,6 +10,7 @@ public class Vechicle {
         this.speed=speed;
     }
 
+
     public int getHand_stearing() {
         return hand_stearing;
     }
