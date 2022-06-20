@@ -14,8 +14,26 @@ public class prefix_sum_2d {
                 arr[i][j]=sc.nextInt();
             }
         }
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.deepToString(arr));
 
+        int [][] prefix_sum= new int[rows][column];
+        for(int i=0 ;i<rows ;i++){
+            for(int j=0;j<column;j++){
+                if(i==0 && j==0){
+                    prefix_sum[i][j]=arr[i][j];
+                }
+                else if(i==0 && j>0){
+                    prefix_sum[i][j]=prefix_sum[i][j-1]+arr[i][j];
+                }
+                else if(i>0 && j==0){
+                    prefix_sum[i][j]=prefix_sum[i-1][j]+arr[i][j];
+                }
+                else{
+                    prefix_sum[i][j]=prefix_sum[i-1][j]+prefix_sum[i][j-1]-prefix_sum[i-1][j-1]+arr[i][j];
+                }
+            }
+        }
+        System.out.println(Arrays.deepToString(prefix_sum));
     }
 
 
