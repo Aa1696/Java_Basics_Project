@@ -1,7 +1,9 @@
 import com.java_basics.*;
+import com.arraylist.*;
 
 public class Main {
     public static void main(String[] args) {
+
         int res=calculateHighScorePosition(1500);
         String name="John";
         displayHighScorePosition(name, res);
