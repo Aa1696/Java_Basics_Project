@@ -3,7 +3,9 @@ import com.arraylist.*;
 
 public class Main {
     public static void main(String[] args) {
-
+        int [] A = {1, 2, 3, 4, 0};
+        rearrange_array arr1=new rearrange_array();
+        arr1.rearrange(A);
         int res=calculateHighScorePosition(1500);
         String name="John";
         displayHighScorePosition(name, res);
