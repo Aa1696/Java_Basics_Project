@@ -64,6 +64,15 @@ public class Solution {
         return max_gcd;
     }
 
+    public int solve3(int[] arr){
+        int n= arr.length;
+        int new_gcd=arr[0];
+        for(int i=1;i<n;i++){
+            new_gcd=gcd(new_gcd,arr[i]);
+        }
+        return new_gcd;
+    }
+
     public static void main(String[] args){
         Solution sk= new Solution();
         int [] A = {7, 2, 5};
@@ -71,6 +80,7 @@ public class Solution {
         System.out.println("Minimum elements to be deleted to make gcd 1 of an array:"+sk.solve(A));
         System.out.println("One integer corresponding to the number of special integers less than or equal to A:"+sk.solve1(12,3,2));
         System.out.println("delete one element such that the GCD(Greatest common divisor) of the remaining array is maximum:"+sk.solve2(B));
+        System.out.println("Minimum elements divides all the elements in an array:="+sk.solve3(B));
     }
 
 }
